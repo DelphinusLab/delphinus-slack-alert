@@ -1,8 +1,13 @@
 {
   "name": "delphinus-slack-alert",
+  "version": "1.0.0",
   "description": "Module which send alert to slack channel",
   "main": "index.js",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DelphinusLab/delphinus-slack-alert.git"
+  },
   "devDependencies": {
     "typescript": "^4.3.4"
   }
