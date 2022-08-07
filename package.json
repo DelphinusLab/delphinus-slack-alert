@@ -1,0 +1,9 @@
+{
+  "name": "delphinus-slack-alert",
+  "description": "Module which send alert to slack channel",
+  "main": "index.js",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  }
+}
