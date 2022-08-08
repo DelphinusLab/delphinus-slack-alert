@@ -1,7 +1,7 @@
 # delphinus-slack-alert
 Module which send alert to slack channel
 
-*** The config setup:
+*** The slack-config attributes: ***
 - active: The on/off switch
 - channelId: ID of the monitor-alerts channel
 - token: The Bot User OAuth Token given by slack. Could be found in https://api.slack.com/apps/A03RBC2LR1D/oauth? after login
