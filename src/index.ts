@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { textCmpPreprosessor } from './tool';
 const slackConfig = require("./slack-config.json");
 
 async function requestSlackHelper(method: string, url: string, params: any, data: any) {
@@ -31,7 +32,7 @@ async function fetchHistoryMessages() {
     const historyMsg = (await requestSlackHelper('GET', url, params, {})).messages;
     const localTimeStamp = Math.floor(new Date().getTime() / 1000);
     const historyMsgInRange = historyMsg.filter((msg: { "ts": string }) => localTimeStamp - Number(msg.ts) < slackConfig.timePeriod);
-    return historyMsgInRange.map((msg: {"text": string}) => msg.text);
+    return historyMsgInRange.map((msg: {"text": string}) => msg.text.replace(/\s/gm, ''));
 }
 
 async function sendNewMessage(text: string) {
@@ -49,7 +50,7 @@ export async function sendAlert(text: any) {
     }
     const historyMessages = await fetchHistoryMessages();
     const newMessage = text.toString() + '.\n' + text.stack ? text.stack : '';
-    if(!historyMessages.includes(newMessage)) {
+    if(!historyMessages.includes(textCmpPreprosessor(newMessage))) {
         await sendNewMessage(newMessage);
     };
 }
