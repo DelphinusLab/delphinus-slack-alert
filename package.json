@@ -2,6 +2,11 @@
   "name": "delphinus-slack-alert",
   "version": "1.0.0",
   "description": "Module which send alert to slack channel",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npx tsc",
+    "test": "node src/test.js"
+  },
   "main": "index.js",
   "license": "ISC",
   "repository": {
