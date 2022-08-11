@@ -19,6 +19,8 @@ User could found the currently valid OAuth Token in https://api.slack.com/apps/A
 
 Collaborators could add other members as new collaborator in https://app.slack.com/app-settings/T03F10P1LSH/A03RBC2LR1D/collaborators.
 
+Note: Do Not push the token to a public github repo as it would be detected by Slack the then be disabled automatically. 
+
 - timePeriod: The allowed repeat interval(unit: second). 
 
 This bot would fetch history messages and avoid sending repeat messages within the given time period.
