@@ -26,4 +26,4 @@ This bot would fetch history messages and avoid sending repeat messages within t
 ### How to test slack alert and its config
 
 You could modify the src/test-config.json and run `npm test` command to trigger a test error.
-If it succeeds, the aimed slack channel could receive a message of this error. 
+If it succeeds, the target slack channel should receive a message of this error. 
