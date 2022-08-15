@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { textCmpPreprosessor } from './tool';
+import { textCmpPreprosessor } from './tools/tool';
 
 export type slackConfig = {
     active: boolean,
@@ -50,7 +50,10 @@ async function sendNewMessage(token: string, text: string, channelId: string) {
     await requestSlackHelper('POST', url, {}, data, token);
 }
 
-export async function sendAlert(text: any, config: slackConfig) {
+export async function sendAlert(text: any, config: slackConfig, printOut: boolean = true) {
+    if(printOut) {
+        console.log(text);
+    }
     if(!config.active) {
         return;
     } 
