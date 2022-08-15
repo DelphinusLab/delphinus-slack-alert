@@ -31,3 +31,15 @@ This bot would fetch history messages and avoid sending repeat messages within t
 
 You could modify the src/test-config.json and run `npm test` command to trigger a test error.
 If it succeeds, the target slack channel should receive a message of this error. 
+
+### How to use this tool in other packages
+
+Other packages could import `sendAlert` method from src/index file
+
+The method `sendAlert` has three parameters: text, config, printOut
+
+- text is a printable variable such as Error and string. If it is an Error, it's stack of location will be sent out as well
+
+- config is the object loaded from config json file
+
+- printOut is a boolean value. When printOut = true, the error messages will be consoled out to server as well. The default value is true.

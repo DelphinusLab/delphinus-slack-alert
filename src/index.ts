@@ -51,8 +51,9 @@ async function sendNewMessage(token: string, text: string, channelId: string) {
 }
 
 export async function sendAlert(text: any, config: slackConfig, printOut: boolean = true) {
+    const newMessage = text.toString() + '.\n' + text.stack ? text.stack : '';
     if(printOut) {
-        console.log(text);
+        console.log(newMessage);
     }
     if(!config.active) {
         return;
@@ -62,7 +63,6 @@ export async function sendAlert(text: any, config: slackConfig, printOut: boolea
         return;
     }
     const historyMessages = await fetchHistoryMessages(config.token, config.channelId, config.timePeriod);
-    const newMessage = text.toString() + '.\n' + text.stack ? text.stack : '';
     if(!historyMessages.includes(textCmpPreprosessor(newMessage))) {
         await sendNewMessage(config.token, newMessage, config.channelId);
     };
