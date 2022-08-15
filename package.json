@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npx tsc",
-    "test": "node src/test.js"
+    "test": "node src/sendToSlackTool/sendToSlack.js"
   },
   "main": "index.js",
   "license": "ISC",

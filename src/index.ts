@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { textCmpPreprosessor } from './tools/tool';
+import { textCmpPreprosessor } from './lib';
 
 export type slackConfig = {
     active: boolean,
