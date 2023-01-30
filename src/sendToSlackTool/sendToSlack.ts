@@ -9,7 +9,6 @@ const config = {
 };
 
 async function main () {
-    console.log(config);
     const err = new Error('Test Error');
     await sendAlert(err, config, false);
 }
