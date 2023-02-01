@@ -1,5 +1,5 @@
 import { sendAlert } from '../index'
-const config = require("./config");
+const config = require("./slack-alert-config");
 
 async function main () {
     const err = new Error('Test Error');
