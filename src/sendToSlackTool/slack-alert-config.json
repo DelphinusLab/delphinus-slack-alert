@@ -1,6 +1,5 @@
 {
-    "active": true,
-    "channelId": "REPLACE-WITH-CHANNELID",
-    "token": "REPLACE-WITH-OAUTH_TOKEN",
-    "timePeriod": 300
+  "channelId": "REPLACE-WITH-CHANNELID",
+  "token": "REPLACE-WITH-OAUTH_TOKEN",
+  "timePeriod": 300
 }
