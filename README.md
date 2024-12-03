@@ -6,11 +6,11 @@ Firstly log in slack from website https://slack.com/signin#/signin if you haven'
 
 Secondly, create a new channel to use this app
 
-Thirdly, Create Alert App mannully through https://api.slack.com/ (Create New APP)
+Thirdly, Create Alert App manually through https://api.slack.com/ (Create New APP)
 - Choose to create From scratch
 - Give it an App name
 - Pick a workspace to develop your app in
-- Set up incoming webhooks (click and active it, then click to add new webhoook to workspace and choose the the channel you would like to add this app)
+- Set up incoming webhooks (click and active it, then click to add new webhook to workspace and choose the the channel you would like to add this app)
 - Add more permissions(such as channels:history, channels:read, chat:write) under setting/basic information/Add features and functionality/Scopes.
 - reinstall the app to channel if settings are changed.
 
